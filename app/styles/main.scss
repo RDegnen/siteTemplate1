@@ -6,15 +6,19 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "libs/mixins";
 
 body {
+  font-family: $body-font;
+}
+
+#body-wrapper {
   margin: 0 auto;
   width: 950px;
-  font-family: $body-font;
 }
 
 // Headings-----------------------------
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font;
   font-weight: 500;
+  margin-top: 10px;
 }
 
 header {
@@ -26,6 +30,15 @@ header {
     border: 1px solid $black;
     margin-top: -20px;
   }
+}
+
+// Footer-------------------------------
+#footer {
+  min-height: 100px;
+  background: $black;
+  color: $white;
+  text-align: center;
+  padding: 20px 0 20px 0;
 }
 
 // Navigation---------------------------
@@ -44,4 +57,19 @@ header {
 .nav-container {
   @extend .container-fluid;
   padding: 0;
+}
+
+// Text--------------------------------
+#text-wrapper {
+  margin: 40px 0;
+  padding: 0 20px;
+
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  p {
+    letter-spacing: 0.075em;
+  }
 }
