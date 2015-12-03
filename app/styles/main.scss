@@ -1,4 +1,47 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import "libs/vars";
+@import "libs/mixins";
+
+body {
+  margin: 0 auto;
+  width: 950px;
+  font-family: $body-font;
+}
+
+// Headings-----------------------------
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  font-weight: 500;
+}
+
+header {
+  h1 {
+    padding-left: 15px;
+    text-transform: uppercase;
+  }
+  hr {
+    border: 1px solid $black;
+    margin-top: -20px;
+  }
+}
+
+// Navigation---------------------------
+.nav-style {
+  @extend .navbar-default;
+  border: none;
+  background: $white;
+
+  a {
+    text-transform: uppercase;
+    font-size: $nav-link-size;
+    color: $black !important;
+  }
+}
+
+.nav-container {
+  @extend .container-fluid;
+  padding: 0;
+}
