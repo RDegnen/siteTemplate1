@@ -1,0 +1,37 @@
+//------------------
+//-----VARIABLES----
+//------------------
+
+// Colors
+$white: #fff;
+$black: #000;
+
+// Text
+$nav-link-size: 20px;
+
+$body-font: 'Open Sans', sans-serif;
+$heading-font: 'Open Sans', sans-serif;
+
+// Borders
+$top-bdr: 2px solid $black;
+
+// Breakpoints
+$small:  768px;
+$medium: 992px;
+$large:  1200px;
+
+//------------------
+//-----MXINS--------
+//------------------
+
+@mixin breakpoint($point) {
+  @if $point == lg {
+    @media (max-width: $large) { @content ;}
+  }
+  @else if $point == med {
+    @media (max-width: $medium) { @content ;}
+  }
+  @else if $point == sm {
+    @media (max-width: $small) { @content ;}
+  }
+}

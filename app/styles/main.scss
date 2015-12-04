@@ -2,8 +2,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
-@import "libs/vars";
-@import "libs/mixins";
+@import "libs/varsMixins";
 
 body {
   font-family: $body-font;
@@ -18,7 +17,11 @@ a {
   text-decoration: none;
 }
 
-#body-wrapper {
+.body-wrapper {
+  @include breakpoint(med) {
+    width: 100%;
+    margin: 0;
+  }
   margin: 0 auto;
   width: 950px;
 }
@@ -91,6 +94,10 @@ header {
 
 .article-desc {
   @extend .col-md-4;
+  @include breakpoint(med) {
+    border-top: none;
+  }
+
   border-top: $top-bdr;
 
   a {
