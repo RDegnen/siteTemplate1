@@ -9,6 +9,15 @@ body {
   font-family: $body-font;
 }
 
+p {
+  letter-spacing: 0.075em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
 #body-wrapper {
   margin: 0 auto;
   width: 950px;
@@ -68,8 +77,18 @@ header {
     width: 100%;
     margin-bottom: 20px;
   }
+}
 
-  p {
-    letter-spacing: 0.075em;
+.blog-row {
+  @extend .row;
+  margin-bottom: 40px;
+}
+
+.article-desc {
+  @extend .col-md-4;
+  border-top: 2px solid $black;
+
+  a {
+    font-weight: 700;
   }
 }
