@@ -20,7 +20,7 @@ a {
 }
 
 blockquote {
-  color: $grey;
+  color: $dark-grey;
 }
 
 a:hover {
@@ -107,10 +107,6 @@ header {
   }
 }
 
-.section-head {
-  text-align: center;
-}
-
 // Articles-----------------------------
 .blog-row {
   @extend .row;
@@ -123,7 +119,7 @@ header {
     border-top: none;
   }
 
-  border-top: $top-bdr;
+  border-top: $border;
 
   a {
     font-weight: 700;
@@ -136,10 +132,25 @@ header {
 
 .article-side {
   @extend .col-md-4;
-  border-top: $top-bdr;
+  border-top: $border;
 }
 
-.pdf-row {
-  border-top: $top-bdr;
+//Links page------------------------------
+.section-head {
+  @include breakpoint(med) {
+    border-bottom: $border;
+  }
+  text-align: center;
+}
+
+.links-row {
+  @include breakpoint(med) {
+    border-top: none;
+  }
+  border-top: $border;
   margin-bottom: 40px;
+
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: none;
+  }
 }
