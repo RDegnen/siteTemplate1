@@ -47,7 +47,9 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
   h1 {
-    display: inline;
+    @include breakpoint(sm) {
+      display: inline;
+    }
     padding-left: 15px;
     font-size: 42px;
   }
@@ -80,10 +82,6 @@ header {
   a:hover {
     color: $grey !important;
   }
-}
-
-.nav-anchor {
-
 }
 
 .nav-container {
