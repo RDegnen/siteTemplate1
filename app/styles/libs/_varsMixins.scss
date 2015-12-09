@@ -20,6 +20,7 @@ $heading-font: 'Open Sans', sans-serif;
 $border: 2px solid $black;
 
 // Breakpoints
+$ex-small: 580px;
 $small:  768px;
 $medium: 992px;
 $large:  1200px;
@@ -37,6 +38,9 @@ $large:  1200px;
   }
   @else if $point == sm {
     @media (max-width: $small) { @content ;}
+  }
+  @else if $point == exsm {
+    @media (max-width: $ex-small) { @content ;}
   }
 }
 
