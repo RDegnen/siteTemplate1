@@ -1,5 +1,54 @@
-var raster = new Raster('slider-active');
-raster.position = view.center;
+var raster = new Raster('slider-active'),
+loaded = false;
+
+raster.on('load', function() {
+  loaded = true;
+  onResize();
+});
+
+raster.visible = false;
+
+var lastPos = view.center;
+function moveHandler(event) {
+  if (!loaded) {return;}
+  if (lastPos.getDistance(event.point) < 10) {return;}
+
+  lastPos = event.point;
+
+  var size = this.bounds.size.clone();
+  var isLandscape = size.width > size.height;
+
+  size /= isLandscape ? [2,1] : [1,2];
+
+  var path = new Path.Rectangle({
+    point: this.bounds.topLeft.floor(),
+    size: size.ceil(),
+    onMouseMove: moveHandler
+  });
+  path.fillColor = raster.getAverageColor(path);
+
+  var path = new Path.Rectangle({
+    point: isLandscape ? this.bounds.topCenter.ceil() : this.bounds.leftCenter.ceil(),
+    size: size.floor(),
+    onMouseMove: moveHandler
+  });
+  path.fillColor = raster.getAverageColor(path);
+
+  this.remove();
+}
+
+function onResize(event) {
+  if (!loaded) {return;}
+
+  project.activeLayer.removeChildren();
+  raster.fitBounds(view.bounds, true);
+
+  new Path.Rectangle({
+    rectangle: view.bounds,
+    fillColor: raster.getAverageColor(view.bounds),
+    onMouseMove: moveHandler
+  });
+}
 
 
 $(document).ready(function() {
