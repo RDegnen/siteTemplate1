@@ -1,19 +1,28 @@
-'use strict';
-$(function() {
-  function draw() {
-    var canvas = document.getElementById('canvas');
+var raster = new Raster('slider-active');
+raster.position = view.center;
 
-    console.log('context got');
-    var ctx = canvas.getContext('2d');
 
-    ctx.fillStyle = 'rgb(200,0,0)';
-    ctx.fillRect (10, 10, 55, 50);
+$(document).ready(function() {
+  var slides = $('#slider-div img'),
+  current = 0;
 
-    ctx.fillStyle = 'rgba(0, 0, 200, 0.5)';
-    ctx.fillRect (30, 30, 55, 50);
-  }
+  $('.btn-slider').on('click', function() {
+    var img = slides.eq(current),
+    nextIndex = 0;
 
-  draw();
+    if ($(this).hasClass('next')) {
+      nextIndex = current >= slides.length - 1 ? 0 : current + 1;
+    } else {
+      nextIndex = current <= 0 ? slides.length - 1 : current - 1;
+    }
+
+    var next = slides.eq(nextIndex);
+
+    current = nextIndex;
+    next.attr('id', 'slider-active');
+    img.attr('id', '');
+
+    var raster = new Raster('slider-active');
+    raster.position = view.center;
+  });
 });
-
-

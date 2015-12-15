@@ -43,10 +43,19 @@
         <hr>
       </header>
 
-      <canvas id="canvas" width="500" height="500">
+      <canvas id="canvas" width="950" height="600">
         <p>Your browser does not support canvas</p>
+        <div id="slider-div">
+          <ul class="slides">
+            <li><img id="slider-active" src="images/slider4.jpg"/></li>
+            <li><img id="" src="images/slider5.jpg"/></li>
+            <li><img id="" src="images/slider6.jpg"/></li>
+          </ul>
+        </div>
       </canvas>
 
+      <button class="btn btn-default btn-slider">Previous</button>
+      <button class="btn btn-default btn-slider next">Next</button>
 
     </div><!-- body-wrapper-->
 
@@ -70,6 +79,7 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/paper/dist/paper-full.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -78,6 +88,6 @@
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
-        <script src="scripts/canvas.js"></script>
+        <script type="text/paperscript" src="scripts/canvas.js" canvas="canvas"></script>
 </body>
 </html>
