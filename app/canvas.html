@@ -43,10 +43,24 @@
         <hr>
       </header>
 
-      <section id="text-wrapper">
-        <img src="images/boats.jpg" alt=""/>
-        <p>Ramps typewriter williamsburg narwhal try-hard. Roof party schlitz squid bicycle rights typewriter bushwick. Vegan kitsch PBR&B mixtape. Pug forage occupy lumbersexual, intelligentsia yuccie +1 freegan VHS. Meditation tofu occupy squid swag fixie. Kitsch cliche XOXO, listicle keytar celiac marfa hashtag try-hard schlitz. Gastropub banh mi beard hoodie pug poutine cliche blog.</p>
-      </section>
+      <canvas id="canvas" width="950" height="700">
+        <p>Your browser does not support canvas</p>
+        <div id="slider-div">
+          <ul class="slides">
+            <li><img id="slider-active" src="images/slider4.jpg"/></li>
+            <li><img id="" src="images/slider5.jpg"/></li>
+            <li><img id="" src="images/slider6.jpg"/></li>
+            <li><img id="" src="images/article1Pic.jpg"/></li>
+            <li><img id="" src="images/article2Pic.jpg"/></li>
+            <li><img id="" src="images/putin.jpg"/></li>
+          </ul>
+        </div>
+      </canvas>
+
+      <div id="canvas-btn-div">
+        <button class="btn-slider">Previous</button>
+        <button class="btn-slider next">Next</button>
+      </div>
 
     </div><!-- body-wrapper-->
 
@@ -70,7 +84,7 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="bower_components/paper/dist/paper-full.js"></script>
+    <script src="bower_components/paper/dist/paper-full.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -78,5 +92,7 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
+        <script type="text/paperscript" src="scripts/canvas.js" canvas="canvas"></script>
 </body>
 </html>

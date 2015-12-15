@@ -17,15 +17,14 @@ a {
   @include transition();
   color: black;
   text-decoration: none;
+  &:hover {
+    color: $grey;
+    text-decoration: none;
+  }
 }
 
 blockquote {
   color: $dark-grey;
-}
-
-a:hover {
-  color: $grey;
-  text-decoration: none;
 }
 
 .body-wrapper {
@@ -176,5 +175,52 @@ header {
 
   img {
     height: inherit;
+  }
+}
+
+//Canvas-----------------------------------
+#slider-div {
+  position: relative;
+
+  ul {
+    overflow: hidden;
+    position: absolute;
+  }
+
+  li {
+    position: absolute;
+    display: none;
+    z-index: 10;
+  }
+
+  li:first-child {
+    display: block;
+    z-index: 1000;
+  }
+
+  #slider-active {
+    z-index: 1000;
+  }
+
+  .previous {background-position:left top;left:0;}
+  .previous:hover {background-position:left bottom;}
+
+  .next {background-position:right top;right:0;}
+  .next:hover {background-position:right bottom;}
+}
+
+#canvas-btn-div {
+  text-align: center;
+  margin: 20px 0;
+
+  button {
+    @include transition();
+    border: none;
+    font-family: $body-font;
+    font-size: 24px;
+    background: $white;
+    &:hover {
+      color: $grey;
+    }
   }
 }
