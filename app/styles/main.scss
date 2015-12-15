@@ -233,12 +233,15 @@ header {
 
 .fade-div {
   position: absolute;
+  text-align: center;
+  font-size: 150px;
   height: 200px;
   width: 300px;
 }
 .fade-img {
   position: absolute;
   width: 100%;
+  display: none;
 }
 
 #fade1 {
