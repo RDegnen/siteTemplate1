@@ -17,15 +17,14 @@ a {
   @include transition();
   color: black;
   text-decoration: none;
+  &:hover {
+    color: $grey;
+    text-decoration: none;
+  }
 }
 
 blockquote {
   color: $dark-grey;
-}
-
-a:hover {
-  color: $grey;
-  text-decoration: none;
 }
 
 .body-wrapper {
@@ -179,17 +178,7 @@ header {
   }
 }
 
-#canvas {
-  border: 1px solid black;
-}
-
 //Canvas-----------------------------------
-// #canvas {
-//   display: none;
-//   position: absolute;
-//   z-index: 100;
-// }
-
 #slider-div {
   position: relative;
 
@@ -220,3 +209,18 @@ header {
   .next:hover {background-position:right bottom;}
 }
 
+#canvas-btn-div {
+  text-align: center;
+  margin: 20px 0;
+
+  button {
+    @include transition();
+    border: none;
+    font-family: $body-font;
+    font-size: 24px;
+    background: $white;
+    &:hover {
+      color: $grey;
+    }
+  }
+}

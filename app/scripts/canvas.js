@@ -73,7 +73,7 @@ $(document).ready(function() {
     next.attr('id', 'slider-active');
     img.attr('id', '');
 
-    // Functions called again for new images when loaded on the click event
+    // Same functions, new names, called again for new images when loaded on the click event
     var raster = new Raster('slider-active');
     loaded = false;
 
