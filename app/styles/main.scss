@@ -93,6 +93,14 @@ header {
   border: none;
 }
 
+.dropdown-menu-style {
+  @extend .dropdown-menu;
+
+  li > a:hover {
+    background: $white;
+  }
+}
+
 // Text--------------------------------
 #text-wrapper {
   margin: 40px 0;
