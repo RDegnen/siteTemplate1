@@ -52,7 +52,7 @@ function onResize(event) {
 }
 
 
-$(document).ready(function() {
+$(function() {
   var slides = $('#slider-div img'),
   current = 0;
 

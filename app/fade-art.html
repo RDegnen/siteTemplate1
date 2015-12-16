@@ -48,41 +48,16 @@
         <hr>
       </header>
 
-      <section id="pdf-wrapper">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="section-head">
-              <h2>Documents</h2>
-            </div>
-            <div class="links-row">
-              <h3><a href="/pdfDocs/R.Degnen_Resume_copy.pdf">Ross' Resume</a></h3>
-              <p>Chuck drumstick flank, strip steak t-bone chicken porchetta landjaeger spare ribs hamburger ribeye pig ground round shankle.</p>
-            </div>
-            <div class="links-row">
-              <h3><a href="/pdfDocs/Finishers.pdf">Five Fantastic Finishers</a></h3>
-              <p>Chuck drumstick flank, strip steak t-bone chicken porchetta landjaeger spare ribs hamburger ribeye pig ground round shankle.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="section-head">
-              <h2>Stuff</h2>
-            </div>
-            <div class="links-row">
-              <h3><a href="https://www.youtube.com/watch?v=56LAdtosFyo">ModX Intro</a></h3>
-              <p>Chuck drumstick flank, strip steak t-bone chicken porchetta landjaeger spare ribs hamburger ribeye pig ground round shankle.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="section-head">
-              <h2>Sites</h2>
-            </div>
-            <div class="links-row">
-              <h3><a href="http://ase.tufts.edu/hql/">Quality of life lab</a></h3>
-              <p>Chuck drumstick flank, strip steak t-bone chicken porchetta landjaeger spare ribs hamburger ribeye pig ground round shankle.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div id="fadeArt-wrapper">
+        <div class="fade-div" id="fade1">A</div>
+        <div class="fade-div" id="fade2">B</div>
+        <div class="fade-div" id="fade3">C</div>
+        <div class="fade-div" id="fade4">D</div>
+        <div class="f-img-div" id="fadeImg1"><img class="fade-img" src="images/article1Pic.jpg"/></div>
+        <div class="f-img-div" id="fadeImg2"><img class="fade-img" src="images/slider4.jpg"/></div>
+        <div class="f-img-div" id="fadeImg3"><img class="fade-img" src="images/slider5.jpg"/></div>
+        <div class="f-img-div" id="fadeImg4"><img class="fade-img" src="images/slider6.jpg"/></div>
+      </div>
 
     </div><!-- body-wrapper-->
 
@@ -106,6 +81,7 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/paper/dist/paper-full.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -113,5 +89,7 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
+
+        <script src="scripts/fadeArt.js"></script>
 </body>
 </html>
