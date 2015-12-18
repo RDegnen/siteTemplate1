@@ -2,6 +2,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 @import "libs/varsMixins";
 
 body {
@@ -76,6 +77,7 @@ header {
   a {
     text-transform: uppercase;
     font-size: $nav-link-size;
+    font-family: $heading-font;
     color: $black !important;
   }
   a:hover {
@@ -142,9 +144,6 @@ header {
 
 //Links page------------------------------
 .section-head {
-  @include breakpoint(med) {
-    border-bottom: $border;
-  }
   text-align: center;
 }
 
@@ -152,7 +151,6 @@ header {
   @include breakpoint(med) {
     border-top: none;
   }
-  border-top: $border;
   margin-bottom: 40px;
 
   h1, h2, h3, h4, h5, h6 {
@@ -224,7 +222,7 @@ header {
   button {
     @include transition();
     border: none;
-    font-family: $body-font;
+    font-family: $heading-font;
     font-size: 24px;
     background: $white;
     &:hover {
